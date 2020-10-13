@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D14B0655252F62EF00901DEB /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B0654252F62EF00901DEB /* SocketIOManager.swift */; };
+		D14B0659252F631000901DEB /* SocketIOManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B0658252F631000901DEB /* SocketIOManagerDefault.swift */; };
+		D14B065C252F647F00901DEB /* Managers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B065B252F647F00901DEB /* Managers.swift */; };
+		D14B065F252F662E00901DEB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B065E252F662E00901DEB /* UserData.swift */; };
+		D14B0662252F6C0500901DEB /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14B0661252F6C0500901DEB /* MessageData.swift */; };
+		D1624DC2252D15CC00D85A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DC1252D15CC00D85A00 /* AppDelegate.swift */; };
+		D1624DC4252D15CC00D85A00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DC3252D15CC00D85A00 /* SceneDelegate.swift */; };
+		D1624DC6252D15CC00D85A00 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DC5252D15CC00D85A00 /* EnterViewController.swift */; };
+		D1624DC9252D15CC00D85A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1624DC7252D15CC00D85A00 /* Main.storyboard */; };
+		D1624DCB252D15CF00D85A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1624DCA252D15CF00D85A00 /* Assets.xcassets */; };
+		D1624DCE252D15CF00D85A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1624DCC252D15CF00D85A00 /* LaunchScreen.storyboard */; };
+		D1624DE3252E6C2D00D85A00 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DE2252E6C2D00D85A00 /* ChatViewController.swift */; };
+		D1624DE6252E76D700D85A00 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DE5252E76D700D85A00 /* UserListViewController.swift */; };
+		D1624DEA252E789400D85A00 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DE9252E789400D85A00 /* UserTableViewCell.swift */; };
+		D1624DED252E81F100D85A00 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1624DEC252E81F100D85A00 /* MessageTableViewCell.swift */; };
+		D1B9D2B6252F21E000BE1BC7 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9D2B5252F21E000BE1BC7 /* Status.swift */; };
+		E6ACD9E4987EBB4BA54CF8C1 /* Pods_WebSockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05FED02F5AD0FBB9558C11E /* Pods_WebSockets.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		129E46FED92637791B25DE2B /* Pods-WebSockets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSockets.debug.xcconfig"; path = "Target Support Files/Pods-WebSockets/Pods-WebSockets.debug.xcconfig"; sourceTree = "<group>"; };
+		C05FED02F5AD0FBB9558C11E /* Pods_WebSockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14B0654252F62EF00901DEB /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		D14B0658252F631000901DEB /* SocketIOManagerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManagerDefault.swift; sourceTree = "<group>"; };
+		D14B065B252F647F00901DEB /* Managers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers.swift; sourceTree = "<group>"; };
+		D14B065E252F662E00901DEB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D14B0661252F6C0500901DEB /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		D1624DBE252D15CC00D85A00 /* WebSockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1624DC1252D15CC00D85A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1624DC3252D15CC00D85A00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D1624DC5252D15CC00D85A00 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		D1624DC8252D15CC00D85A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1624DCA252D15CF00D85A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1624DCD252D15CF00D85A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1624DCF252D15CF00D85A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1624DE2252E6C2D00D85A00 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D1624DE5252E76D700D85A00 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		D1624DE9252E789400D85A00 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		D1624DEC252E81F100D85A00 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		D1B9D2B5252F21E000BE1BC7 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		D6689B6C9EBB58631502D4F4 /* Pods-WebSockets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSockets.release.xcconfig"; path = "Target Support Files/Pods-WebSockets/Pods-WebSockets.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1624DBB252D15CC00D85A00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ACD9E4987EBB4BA54CF8C1 /* Pods_WebSockets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AD0CAE175F630CD73ED563B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C05FED02F5AD0FBB9558C11E /* Pods_WebSockets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D14B0653252F62D200901DEB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D14B0654252F62EF00901DEB /* SocketIOManager.swift */,
+				D14B0658252F631000901DEB /* SocketIOManagerDefault.swift */,
+				D14B065B252F647F00901DEB /* Managers.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D1624DB5252D15CC00D85A00 = {
+			isa = PBXGroup;
+			children = (
+				D1624DC0252D15CC00D85A00 /* WebSockets */,
+				D1624DBF252D15CC00D85A00 /* Products */,
+				D8FFA58381F11A4245B4D513 /* Pods */,
+				9AD0CAE175F630CD73ED563B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D1624DBF252D15CC00D85A00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1624DBE252D15CC00D85A00 /* WebSockets.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1624DC0252D15CC00D85A00 /* WebSockets */ = {
+			isa = PBXGroup;
+			children = (
+				D14B0653252F62D200901DEB /* Managers */,
+				D1B9D2AE252F211A00BE1BC7 /* Models */,
+				D1B9D2AC252F204100BE1BC7 /* Controllers */,
+				D1624DE8252E788600D85A00 /* Cells */,
+				D1624DC1252D15CC00D85A00 /* AppDelegate.swift */,
+				D1624DC3252D15CC00D85A00 /* SceneDelegate.swift */,
+				D1624DC7252D15CC00D85A00 /* Main.storyboard */,
+				D1624DCA252D15CF00D85A00 /* Assets.xcassets */,
+				D1624DCC252D15CF00D85A00 /* LaunchScreen.storyboard */,
+				D1624DCF252D15CF00D85A00 /* Info.plist */,
+			);
+			path = WebSockets;
+			sourceTree = "<group>";
+		};
+		D1624DE8252E788600D85A00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1624DE9252E789400D85A00 /* UserTableViewCell.swift */,
+				D1624DEC252E81F100D85A00 /* MessageTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D1B9D2AC252F204100BE1BC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1624DC5252D15CC00D85A00 /* EnterViewController.swift */,
+				D1624DE2252E6C2D00D85A00 /* ChatViewController.swift */,
+				D1624DE5252E76D700D85A00 /* UserListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1B9D2AE252F211A00BE1BC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1B9D2B5252F21E000BE1BC7 /* Status.swift */,
+				D14B065E252F662E00901DEB /* UserData.swift */,
+				D14B0661252F6C0500901DEB /* MessageData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8FFA58381F11A4245B4D513 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				129E46FED92637791B25DE2B /* Pods-WebSockets.debug.xcconfig */,
+				D6689B6C9EBB58631502D4F4 /* Pods-WebSockets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1624DBD252D15CC00D85A00 /* WebSockets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1624DD2252D15CF00D85A00 /* Build configuration list for PBXNativeTarget "WebSockets" */;
+			buildPhases = (
+				7500D2DF3931A7D7E16AFC06 /* [CP] Check Pods Manifest.lock */,
+				D1624DBA252D15CC00D85A00 /* Sources */,
+				D1624DBB252D15CC00D85A00 /* Frameworks */,
+				D1624DBC252D15CC00D85A00 /* Resources */,
+				3EFFB384169E0D0CB9916B6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebSockets;
+			productName = WebSockets;
+			productReference = D1624DBE252D15CC00D85A00 /* WebSockets.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1624DB6252D15CC00D85A00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					D1624DBD252D15CC00D85A00 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = D1624DB9252D15CC00D85A00 /* Build configuration list for PBXProject "WebSockets" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1624DB5252D15CC00D85A00;
+			productRefGroup = D1624DBF252D15CC00D85A00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1624DBD252D15CC00D85A00 /* WebSockets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1624DBC252D15CC00D85A00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1624DCE252D15CF00D85A00 /* LaunchScreen.storyboard in Resources */,
+				D1624DCB252D15CF00D85A00 /* Assets.xcassets in Resources */,
+				D1624DC9252D15CC00D85A00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EFFB384169E0D0CB9916B6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7500D2DF3931A7D7E16AFC06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSockets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1624DBA252D15CC00D85A00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1624DE6252E76D700D85A00 /* UserListViewController.swift in Sources */,
+				D1624DED252E81F100D85A00 /* MessageTableViewCell.swift in Sources */,
+				D1624DC6252D15CC00D85A00 /* EnterViewController.swift in Sources */,
+				D1624DEA252E789400D85A00 /* UserTableViewCell.swift in Sources */,
+				D14B0659252F631000901DEB /* SocketIOManagerDefault.swift in Sources */,
+				D14B0655252F62EF00901DEB /* SocketIOManager.swift in Sources */,
+				D14B065F252F662E00901DEB /* UserData.swift in Sources */,
+				D1624DC2252D15CC00D85A00 /* AppDelegate.swift in Sources */,
+				D1624DE3252E6C2D00D85A00 /* ChatViewController.swift in Sources */,
+				D14B065C252F647F00901DEB /* Managers.swift in Sources */,
+				D1624DC4252D15CC00D85A00 /* SceneDelegate.swift in Sources */,
+				D1B9D2B6252F21E000BE1BC7 /* Status.swift in Sources */,
+				D14B0662252F6C0500901DEB /* MessageData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D1624DC7252D15CC00D85A00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1624DC8252D15CC00D85A00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1624DCC252D15CF00D85A00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1624DCD252D15CF00D85A00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1624DD0252D15CF00D85A00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1624DD1252D15CF00D85A00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1624DD3252D15CF00D85A00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129E46FED92637791B25DE2B /* Pods-WebSockets.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSockets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.kpfu.elina.WebSockets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1624DD4252D15CF00D85A00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6689B6C9EBB58631502D4F4 /* Pods-WebSockets.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WebSockets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.kpfu.elina.WebSockets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1624DB9252D15CC00D85A00 /* Build configuration list for PBXProject "WebSockets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1624DD0252D15CF00D85A00 /* Debug */,
+				D1624DD1252D15CF00D85A00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1624DD2252D15CF00D85A00 /* Build configuration list for PBXNativeTarget "WebSockets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1624DD3252D15CF00D85A00 /* Debug */,
+				D1624DD4252D15CF00D85A00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1624DB6252D15CC00D85A00 /* Project object */;
+}
