@@ -15,5 +15,8 @@ protocol SocketIOManager {
     func observeUserList(completionHandler: @escaping ([[String: Any]]) -> Void)
     func send(message: String, username: String)
     func observeMessages(completionHandler: @escaping ([String: Any]) -> Void)
-    
+    func sendStartTypeEvent(nickName: String)
+    func observeTypeChangeEvent(onReceive: @escaping ([String: Any]) -> Void)
+    func sendStopTypeEvent(nickName: String)
+    func exitFromChat(nickName: String)
 }

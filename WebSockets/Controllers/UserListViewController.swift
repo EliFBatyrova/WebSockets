@@ -40,6 +40,10 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(exitFromChat))
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
         connectToChat()
         startObservingUserList()
     }
@@ -93,6 +97,12 @@ class UserListViewController: UIViewController {
     
     @IBAction private func onWriteMessageTouchUpInside(_ sender: Any) {
         self.performSegue(withIdentifier: Segues.writeMessage, sender: self.username)
+    }
+    
+    @objc
+    private func exitFromChat() {
+        socketManager.exitFromChat(nickName: username)
+        navigationController?.popViewController(animated: true)
     }
 }
 

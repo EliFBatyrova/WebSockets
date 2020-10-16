@@ -28,10 +28,8 @@ class EnterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
-        
         socketManager.establishConnection()
+        setupView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,8 +53,7 @@ class EnterViewController: UIViewController {
     
     @IBAction private func onEnterButtonTouchUpInside(_ sender: Any) {
         let username = userNameTextField.text
-        
-        self.performSegue(withIdentifier: Segues.showChat, sender: username)
+        performSegue(withIdentifier: Segues.showChat, sender: username)
     }
     
     //MARK: -
