@@ -20,7 +20,7 @@ class SocketIOManagerDefault: NSObject, SocketIOManager {
     override init() {
         super.init()
         
-        manager = SocketManager(socketURL: URL(string: "http://192.168.1.108:3000")!)
+        manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!)
         socket = manager.defaultSocket
     }
     
@@ -28,12 +28,10 @@ class SocketIOManagerDefault: NSObject, SocketIOManager {
     
     func establishConnection() {
         socket.connect()
-        isConnected = true
     }
     
     func closeConnection() {
         socket.disconnect()
-        isConnected = false
     }
     
     func connectToChat(with name: String) {
