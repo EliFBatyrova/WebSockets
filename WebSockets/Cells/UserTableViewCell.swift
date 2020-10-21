@@ -14,10 +14,22 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     
+    private var userName = ""
+    
+    public var isUserTyping: Bool = false {
+        didSet {
+            
+            userNameLabel.text = isUserTyping ?  userName + "(печатает..)" : userName
+        }
+    }
+    
     //MARK: - Instance Methods
     
-    func configure(userName: String, status: Status) {
-        userNameLabel.text = userName
+    func configure(currentUserName: String, userName: String, status: Status) {
+        
+        self.userName = userName
+        
+        userNameLabel.text = currentUserName == userName ? "\(userName)(ВЫ)" : userName        
         
         switch status {
         case .online:

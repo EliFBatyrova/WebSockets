@@ -15,5 +15,8 @@ protocol SocketIOManager {
     func observeUserList(completionHandler: @escaping ([[String: Any]]) -> Void)
     func send(message: String, username: String)
     func observeMessages(completionHandler: @escaping ([String: Any]) -> Void)
-    
+    func sendTypingStartedEvent(userName: String)
+    func observeTypingEvent(completionHandler: @escaping ([String: Any]) -> Void)
+    func sendTypingStopped(userName: String)
+    func leaveChat(userName: String)
 }

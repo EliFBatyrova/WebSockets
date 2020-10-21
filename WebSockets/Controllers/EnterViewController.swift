@@ -38,6 +38,7 @@ class EnterViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         if segue.identifier == Segues.showChat {
+            
             guard let username = sender as? String else {
                 return
             }
@@ -54,7 +55,11 @@ class EnterViewController: UIViewController {
     //MARK: - Instance Methods
     
     @IBAction private func onEnterButtonTouchUpInside(_ sender: Any) {
-        let username = userNameTextField.text
+        
+        guard
+            let username = userNameTextField.text,
+            !username.isEmpty
+        else { return }                
         
         self.performSegue(withIdentifier: Segues.showChat, sender: username)
     }

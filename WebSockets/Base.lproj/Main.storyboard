@@ -185,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gtY-2R-lGk">
-                                <rect key="frame" x="0.0" y="88" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageTableCell" rowHeight="113" id="7yS-n3-kDp" customClass="MessageTableViewCell" customModule="WebSockets" customModuleProvider="target">
@@ -263,30 +263,40 @@
                                     <action selector="onSendButtonTouchUpInside:" destination="13l-cS-SGx" eventType="touchUpInside" id="PCg-If-2lu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-fs-idj">
+                                <rect key="frame" x="16" y="757" width="382" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BZM-hL-oWX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ArP-fs-idj" firstAttribute="top" secondItem="gtY-2R-lGk" secondAttribute="bottom" constant="2" id="8DA-a0-Qov"/>
                             <constraint firstItem="gtY-2R-lGk" firstAttribute="leading" secondItem="BZM-hL-oWX" secondAttribute="leading" id="9HQ-BY-Dua"/>
                             <constraint firstItem="1pi-ks-lAe" firstAttribute="leading" secondItem="BZM-hL-oWX" secondAttribute="leading" constant="16" id="9dj-cW-xph"/>
+                            <constraint firstItem="1pi-ks-lAe" firstAttribute="top" secondItem="ArP-fs-idj" secondAttribute="bottom" constant="1" id="B2N-9V-gvO"/>
                             <constraint firstItem="jT0-Ct-5Db" firstAttribute="top" secondItem="1pi-ks-lAe" secondAttribute="bottom" constant="4" id="EfX-dV-nBW"/>
                             <constraint firstItem="BZM-hL-oWX" firstAttribute="trailing" secondItem="1pi-ks-lAe" secondAttribute="trailing" constant="16" id="FTR-XJ-1Vr"/>
                             <constraint firstAttribute="bottom" secondItem="sM7-gc-rBV" secondAttribute="bottom" id="H67-sj-aPr"/>
+                            <constraint firstItem="ArP-fs-idj" firstAttribute="leading" secondItem="BZM-hL-oWX" secondAttribute="leading" constant="16" id="Ipg-fX-bZa"/>
                             <constraint firstItem="sM7-gc-rBV" firstAttribute="leading" secondItem="BZM-hL-oWX" secondAttribute="leading" id="Kn3-R3-w44"/>
+                            <constraint firstItem="BZM-hL-oWX" firstAttribute="trailing" secondItem="ArP-fs-idj" secondAttribute="trailing" constant="16" id="UqJ-bw-Nfx"/>
                             <constraint firstItem="jT0-Ct-5Db" firstAttribute="leading" secondItem="BZM-hL-oWX" secondAttribute="leading" id="ar2-HB-2N2"/>
                             <constraint firstItem="BZM-hL-oWX" firstAttribute="trailing" secondItem="sM7-gc-rBV" secondAttribute="trailing" id="dPV-sw-zAp"/>
                             <constraint firstItem="sM7-gc-rBV" firstAttribute="top" secondItem="jT0-Ct-5Db" secondAttribute="bottom" id="eLX-il-qR1"/>
                             <constraint firstItem="gtY-2R-lGk" firstAttribute="top" secondItem="BZM-hL-oWX" secondAttribute="top" id="o5e-FI-5qk"/>
-                            <constraint firstItem="1pi-ks-lAe" firstAttribute="top" secondItem="gtY-2R-lGk" secondAttribute="bottom" constant="16" id="oyP-qC-P3z"/>
                             <constraint firstItem="BZM-hL-oWX" firstAttribute="trailing" secondItem="jT0-Ct-5Db" secondAttribute="trailing" id="uXZ-r3-SWO"/>
                             <constraint firstItem="BZM-hL-oWX" firstAttribute="trailing" secondItem="gtY-2R-lGk" secondAttribute="trailing" id="wIZ-3A-T4H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kLy-ny-iCy"/>
                     <connections>
-                        <outlet property="bottomViewHeightConstraint" destination="gbS-y5-Chz" id="fYG-fo-mjX"/>
+                        <outlet property="bottomViewHeightConstraint" destination="EfX-dV-nBW" id="Hmx-42-81F"/>
                         <outlet property="messageTextField" destination="1pi-ks-lAe" id="Nmh-8C-QY7"/>
                         <outlet property="tableView" destination="gtY-2R-lGk" id="qzB-he-uQR"/>
+                        <outlet property="typingIndicatorLabel" destination="ArP-fs-idj" id="966-JT-7d7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBs-PW-i1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

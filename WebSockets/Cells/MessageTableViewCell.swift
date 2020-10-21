@@ -17,7 +17,15 @@ class MessageTableViewCell: UITableViewCell {
     //MARK: - Instance Methods
     
     func configure(message: String, username: String) {
+        
+        let isMe = username == UserDefaults.standard.string(forKey: "currentUserName")
+        if isMe {
+            self.backgroundColor = .red
+        }
+        
         messageLabel.text = message
-        senderLabel.text = "Отправитель: \(username)"
+        
+        let senderName = isMe ? "ВЫ" : username
+        senderLabel.text = "Отправитель: \(senderName)"
     }
 }
