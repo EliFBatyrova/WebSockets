@@ -17,7 +17,10 @@ class MessageTableViewCell: UITableViewCell {
     //MARK: - Instance Methods
     
     func configure(message: String, username: String) {
+        
         messageLabel.text = message
         senderLabel.text = "Отправитель: \(username)"
+        
+        self.selectionStyle = .none
     }
 }

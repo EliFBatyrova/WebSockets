@@ -20,7 +20,7 @@ class SocketIOManagerDefault: NSObject, SocketIOManager {
     override init() {
         super.init()
         
-        manager = SocketManager(socketURL: URL(string: "http://10.17.33.93:3000")!)
+        manager = SocketManager(socketURL: URL(string: "http://10.17.35.28:3000")!)
         socket = manager.defaultSocket
     }
     
@@ -56,6 +56,30 @@ class SocketIOManagerDefault: NSObject, SocketIOManager {
             messageDict["message"] = dataArray[1] as! String
             
             completionHandler(messageDict)
+        }
+    }
+    
+    func exitFromChat(with name: String) {
+        socket.emit("exitUser", name)
+    }
+    
+    func observeUserExitUpdate(completionHandler: @escaping (String) -> Void) {
+        socket.on("userExitUpdate") { dataArray, _ in
+            completionHandler(dataArray[0] as! String)
+        }
+    }
+    
+    func startType(with name: String) {
+        socket.emit("startType", name)
+    }
+    
+    func stopType(with name: String) {
+        socket.emit("stopType", name)
+    }
+    
+    func observeUserTypingUpdate(completionHandler: @escaping ([String: Any]) -> Void) {
+        socket.on("userTypingUpdate") { dataArray, _ in
+            completionHandler(dataArray[0] as! [String: Any])
         }
     }
 }

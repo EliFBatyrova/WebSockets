@@ -59,7 +59,7 @@ class EnterViewController: UIViewController {
         self.performSegue(withIdentifier: Segues.showChat, sender: username)
     }
     
-    //MARK: -
+    //MARK: - 
     
     private func setupView() {
         enterButton.layer.cornerRadius = 5

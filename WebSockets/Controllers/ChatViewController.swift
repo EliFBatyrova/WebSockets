@@ -21,7 +21,7 @@ class ChatViewController: UIViewController {
     @IBOutlet private weak var messageTextField: UITextField!
     @IBOutlet private weak var bottomViewHeightConstraint: NSLayoutConstraint!
     
-    //MARK: -
+    //MARK: - Properties
     
     private var username: String!
     
@@ -41,8 +41,10 @@ class ChatViewController: UIViewController {
         setupKeyboardNotifications()
         
         self.navigationItem.title = username
+        self.messageTextField.delegate = self
         
         startObservingMessages()
+        startObservingTypingUpdate()
     }
     
     //MARK: - Instance Methods
@@ -51,15 +53,17 @@ class ChatViewController: UIViewController {
         self.username = username
     }
     
-    //MARK: -
+    //MARK: - Button actions
     
     @IBAction private func onSendButtonTouchUpInside(_ sender: Any) {
         let text = messageTextField.text ?? ""
         
         socketManager.send(message: text, username: self.username)
+        messageTextField.text = ""
+        messageTextField.resignFirstResponder()
     }
     
-    //MARK: -
+    //MARK: - Observing methods
     
     func startObservingMessages() {
         socketManager.observeMessages(completionHandler: { [weak self] data in
@@ -71,6 +75,22 @@ class ChatViewController: UIViewController {
             self?.messages.append(message)
         })
     }
+    
+    func startObservingTypingUpdate() {
+        socketManager.observeUserTypingUpdate(completionHandler: { [weak self] data in
+            
+            let typingUsersArray = data.keys.sorted()
+            if !typingUsersArray.isEmpty {
+                let typingUsersString = typingUsersArray.joined(separator:", ")
+                let informationString = "\(typingUsersString) typing..."
+                self?.navigationItem.title = informationString
+            } else {
+                self?.navigationItem.title = self?.username
+            }
+        })
+    }
+    
+    //MARK: - Keyboard setup
     
     private func setupKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
@@ -106,6 +126,23 @@ class ChatViewController: UIViewController {
             
             self?.view.layoutIfNeeded()
         }
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
+extension ChatViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        socketManager.startType(with: self.username)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        socketManager.stopType(with: self.username)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        messageTextField.text = ""
+        return messageTextField.resignFirstResponder()
     }
 }
 

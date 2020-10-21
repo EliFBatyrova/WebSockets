@@ -23,7 +23,7 @@ class UserListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    //MARK: -
+    //MARK: - Properties
     
     private var username: String!
     
@@ -40,8 +40,10 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackButton()
         connectToChat()
         startObservingUserList()
+        startObservingUserExitUpdate()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,11 +68,26 @@ class UserListViewController: UIViewController {
         self.username = username
     }
     
-    //MARK: -
+    //MARK: - Private methods
+    
+    private func setupBackButton() {
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Exit chat", style: UIBarButtonItem.Style.plain, target: self, action: #selector(exitFromChat))
+        self.navigationItem.leftBarButtonItem = newBackButton
+    }
     
     private func connectToChat() {
         socketManager.connectToChat(with: self.username)
     }
+    
+    @objc
+    private func exitFromChat() {
+        socketManager.exitFromChat(with: self.username)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    //MARK: - Observing methods
     
     private func startObservingUserList() {
         socketManager.observeUserList(completionHandler: { [weak self] data in
@@ -89,7 +106,14 @@ class UserListViewController: UIViewController {
         })
     }
     
-    //MARK: -
+    private func startObservingUserExitUpdate() {
+        socketManager.observeUserExitUpdate(completionHandler: { [weak self] data in
+            guard let filteredUsers = self?.users.filter({$0.username != data}) else { return }
+            self?.users = filteredUsers
+        })
+    }
+    
+    //MARK: - Button actions
     
     @IBAction private func onWriteMessageTouchUpInside(_ sender: Any) {
         self.performSegue(withIdentifier: Segues.writeMessage, sender: self.username)

@@ -17,6 +17,7 @@ class UserTableViewCell: UITableViewCell {
     //MARK: - Instance Methods
     
     func configure(userName: String, status: Status) {
+        
         userNameLabel.text = userName
         
         switch status {
@@ -28,5 +29,7 @@ class UserTableViewCell: UITableViewCell {
             statusLabel.text = "Offline"
             statusLabel.textColor = .red
         }
+        
+        self.selectionStyle = .none
     }
 }
